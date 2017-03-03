@@ -47,7 +47,7 @@ createBars = function(){
 setBarsProgress = function(barId, barCount){
 				
 	if(barCount>100){
-		$("#"+barId).css("background","red");
+		$("#"+barId).css("background","#f36a6a");
 	}
 	else{
 		$("#"+barId).css("background","#b2e89c");
