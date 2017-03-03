@@ -46,6 +46,12 @@ createBars = function(){
 
 setBarsProgress = function(barId, barCount){
 				
+	if(barCount>100){
+		$("#"+barId).css("background","red");
+	}
+	else{
+		$("#"+barId).css("background","#b2e89c");
+	}
 	if(barCount >= 0 &&  barCount <= barData.limit){
 		var lPercentage = (barCount/barData.limit)*100;
 		
@@ -63,6 +69,8 @@ setBarsProgress = function(barId, barCount){
 		$("#"+barId).html(barData.limit+'%');
 		$("#"+barId).css('width','100%');
 	}
+	
+
 };
 
 getBars = function(){
